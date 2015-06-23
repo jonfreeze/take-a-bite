@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Take A Bite | A sound bite</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<style>
+	.container-fluid {
+		padding: 0;
+	}
+	#title {
+		text-align: center;
+	}
+	.btn:focus {
+		outline: none;
+	}
+	.btn {
+		border-radius: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		
+		.container-fluid {
+			padding: 0 15px;
+		}
+		#title {
+			text-align: left;
+		}
+		.btn {
+			border-radius: 3px;
+		}
+	}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div id="title">
+					<h3 class="h3">Take A Bite</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-xs-12">
+					<div class="col-md-4 col-xs-12">
+						<button id="play" class="btn btn-success">Play</button>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<button id="pause" class="btn btn-warning">Pause</button>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<button id="stop" class="btn btn-danger">Stop</button>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+	<script src="js/take-a-bite.js"></script>
+
+	<script>
+		SC.initialize({
+			client_id: "4e708cb05e22103a4c94382bcb673cd3",
+			redirect_uri: "http://teamfriesewedding.nyc/callback.html",
+		});
+	</script>
+
+</body>
+</html>
